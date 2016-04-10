@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleDemo", "ConsoleDemo\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoLib", "DemoLib\DemoLib.csproj", "{C0B3569F-5994-481C-A6FC-198A94ADA292}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonWinChangeFaWin", "SonWinChangeFaWin\SonWinChangeFaWin.csproj", "{4B498A5C-5C27-4463-AC55-D7CB551324B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C0B3569F-5994-481C-A6FC-198A94ADA292}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0B3569F-5994-481C-A6FC-198A94ADA292}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0B3569F-5994-481C-A6FC-198A94ADA292}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B498A5C-5C27-4463-AC55-D7CB551324B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B498A5C-5C27-4463-AC55-D7CB551324B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B498A5C-5C27-4463-AC55-D7CB551324B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B498A5C-5C27-4463-AC55-D7CB551324B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
