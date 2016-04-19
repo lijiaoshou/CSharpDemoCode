@@ -7,16 +7,24 @@ namespace ConsoleDemo
     {
         static void Main(string[] args)
         {
-            ClassPeople cp = new ClassPeople();
-            cp.DoWork("李超", cp.SayChinese);
-            cp.DoWork("lichao",cp.SayEnglish);
-
-
-#if DEBUG
-            Console.WriteLine("调试状态");
-#endif
-            
+            XMLOperate.CreateXmlByXmlDocument();
+            XMLOperate.CreateXmlByXmlTextWriter();
+            string strXml = XMLOperate.ReadXmlByXmlTextReader();
+            Console.WriteLine(strXml);
             Console.ReadKey();
+            #region old
+
+            //            ClassPeople cp = new ClassPeople();
+            //            cp.DoWork("李超", cp.SayChinese);
+            //            cp.DoWork("lichao",cp.SayEnglish);
+
+
+            //#if DEBUG
+            //            Console.WriteLine("调试状态");
+            //#endif
+
+            //            Console.ReadKey();
+            #endregion
         }
     }
 
