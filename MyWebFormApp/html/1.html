@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <!--XMLHTTP POST调用Webservice-->
+    <!--<script type="text/javascript">
+         function GetAdd_HTTPPOST(i, j)
+         {
+             var URL = "http://http://localhost:26298/MyWebService.asmx?op=Add";
+             var Params = "i=" + i + "&j=" + j;
+             var xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+             xmlhttp.Open("POST", URL, false);
+             xmlhttp.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+             xmlhttp.SetRequestHeader("Content-Length", Params.length);
+             xmlhttp.send(Params);
+             var x = xmlhttp.responseXML;
+             div1.innerHTML = x.childNodes[1].text;
+
+             alert(xmlhttp.Status);
+             alert(xmlhttp.StatusText);
+         }
+     </script>
+
+    <input type="button" value="HTTPPOST" onclick="GetAdd_HTTPPOST('5','6')" id="Button2" name="Button2"/>
+    <br />
+    <div id="div1"></div>-->
+    <!---->
+    
+    <!--SOAP调用Webservice-->
+    <script type="text/javascript">
+        function GetAdd_SOAP(i, j)
+        {
+            var xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            var soapMessage, sopData, URL;
+
+            //设置soap信息
+            soapMessage = "<?xml version\"1.0\" encoding=\"uft-8\"?>";
+            soapMessage += "<soap:Envelope xmlns:xsi=\"http:www.w3.org/2001/XMLSchema-instance\"" +
+                        +" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">";
+            soapMessage += "<soap:Body>";
+
+            //设置SOAP数据----begin----
+            soapData = "<Add xmlns=\"http://tempuri.org/\">";
+            soapData += "  <i>" + i + "</i>";
+            soapData += "  <j>" + j +"</j>";
+        }
+    </script>
+    <!---->
+</body>
+</html>

@@ -7,11 +7,22 @@ namespace ConsoleDemo
     {
         static void Main(string[] args)
         {
-            XMLOperate.CreateXmlByXmlDocument();
-            XMLOperate.CreateXmlByXmlTextWriter();
-            string strXml = XMLOperate.ReadXmlByXmlTextReader();
-            Console.WriteLine(strXml);
+            //MyWebServiceReference.MyWebServiceSoapClient proxyClient = new MyWebServiceReference.MyWebServiceSoapClient();
+
+            //string result = proxyClient.Add(1,2);
+            string result=WebServiceOperate.GetServiceByPost();
+
+            Console.WriteLine(result);
             Console.ReadKey();
+
+            #region old
+            //XMLOperate.CreateXmlByXmlDocument();
+            //XMLOperate.CreateXmlByXmlTextWriter();
+            //string strXml = XMLOperate.ReadXmlByXmlTextReader();
+            //Console.WriteLine(strXml);
+            //Console.ReadKey();
+            #endregion
+
             #region old
 
             //            ClassPeople cp = new ClassPeople();
