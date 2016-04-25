@@ -7,13 +7,17 @@ namespace ConsoleDemo
     {
         static void Main(string[] args)
         {
-            //MyWebServiceReference.MyWebServiceSoapClient proxyClient = new MyWebServiceReference.MyWebServiceSoapClient();
-
-            //string result = proxyClient.Add(1,2);
-            string result=WebServiceOperate.GetServiceByPost();
+            string result = FileOperate.DisplayAboutSystemInformation();
 
             Console.WriteLine(result);
             Console.ReadKey();
+
+            #region old
+            //MyWebServiceReference.MyWebServiceSoapClient proxyClient = new MyWebServiceReference.MyWebServiceSoapClient();
+
+            //string result = proxyClient.Add(1,2);
+            //string result=WebServiceOperate.GetServiceByPost();
+            #endregion
 
             #region old
             //XMLOperate.CreateXmlByXmlDocument();
