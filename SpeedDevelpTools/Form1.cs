@@ -32,14 +32,14 @@ namespace SpeedDevelpTools
         private void button2_Click(object sender, EventArgs e)
         {
             
-            textBox1.Text = GetFunctionNames(checkBox1);
+            textBox1.Text = GetFunctionNames(button4);
         }
 
         private string GetFunctionNames(Control control)
         {
             PropertyInfo propertyInfo = control.GetType().GetProperty("Events", BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance);
             EventHandlerList eventHandlerList = propertyInfo.GetValue(control, new object[] { }) as EventHandlerList;
-            FieldInfo fieldInfo = typeof(CheckBox).GetField("EVENT_CHECKEDCHANGED", BindingFlags.NonPublic | BindingFlags.Static);
+            FieldInfo fieldInfo = typeof(Control).GetField("EventBackgroundImageChanged", BindingFlags.NonPublic | BindingFlags.Static|BindingFlags.Public|BindingFlags.Instance|BindingFlags.DeclaredOnly);
             EventInfo[] events= control.GetType().GetEvents();
 
             var eventKey = fieldInfo.GetValue(control);
@@ -67,6 +67,21 @@ namespace SpeedDevelpTools
         {
             Form2 form = new Form2();
             form.Show();
+        }
+
+        private void checkBox1_BackgroundImageChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("Changed");
+        }
+
+        private void button4_BackgroundImageChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("show");
         }
     }
 }
